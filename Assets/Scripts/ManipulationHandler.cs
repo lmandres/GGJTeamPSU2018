@@ -3,25 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Split : MonoBehaviour, IBeginDragHandler,  IDragHandler, IEndDragHandler{
+public class ManipulationHandler : MonoBehaviour, IBeginDragHandler,  IDragHandler, IEndDragHandler{
 
-    public GameObject emitted;
-    public Transform[] spawns;
-    public bool locked; //locked items are part of the puzzle
     public static GameObject satellite;
     Vector3 startPos;
     Quaternion initQ;
-    public string tag;
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag != tag) {
-            return;
-        }
-        Destroy(collision.gameObject);
-        foreach (Transform spawn in spawns) {
-            Instantiate(emitted, spawn.position, spawn.rotation);
-        }
-    }
 
     public void OnBeginDrag(PointerEventData eventData) {
         satellite = gameObject;
@@ -30,7 +16,7 @@ public class Split : MonoBehaviour, IBeginDragHandler,  IDragHandler, IEndDragHa
 
         Debug.Log(initQ);
         Debug.Log(Input.mousePosition);
-        Debug.Log(Input.GetMouseButton(1));
+        Debug.Log("mouse1: " + Input.GetMouseButton(1).ToString());
     }
 
     public void OnDrag(PointerEventData eventData) {
@@ -57,22 +43,11 @@ public class Split : MonoBehaviour, IBeginDragHandler,  IDragHandler, IEndDragHa
     }
 
     private void OnMouseDown() {
-        if (locked) {
-            Debug.Log("mousedown on locked splitter!");
-        } else {
-            Debug.Log("mousedown on unlocked splitter!");
-            Vector2 MousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector2 objPosition = Camera.main.ScreenToWorldPoint(MousePosition);
-            transform.position = objPosition;
-        }
+        Debug.Log("mousedonw on locked sat!");
     }
 
     private void OnMouseUpAsButton() {
-        if (locked) {
-            Debug.Log("mouseclick on locked splitter!");
-        } else {
-            Debug.Log("mouseclick on unlocked splitter!");
-        }
+        Debug.Log("mouseclick on locked sat!");
     }
         
 }
