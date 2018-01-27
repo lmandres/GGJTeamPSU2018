@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3951507457
+    locked: 0
+  - name: Planets
+    uniqueID: 21811461
+    locked: 0
+  - name: Satellites
+    uniqueID: 146456141
+    locked: 0
+  - name: Transmissions
+    uniqueID: 391493315
+    locked: 0
