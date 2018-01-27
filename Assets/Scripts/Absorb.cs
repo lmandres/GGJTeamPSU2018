@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Absorb : MonoBehaviour {
     public int magnitude;
+    public string tag;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(collision.gameObject);
-        //Destroy(collision.gameObject);
+        if (collision.gameObject.tag != tag) {
+            return;
+        }
         collision.gameObject.GetComponent<RadioWave>().strength -= magnitude;
     }
 }

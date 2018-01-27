@@ -248,6 +248,7 @@ MonoBehaviour:
   spawns:
   - {fileID: 4318773056458836}
   - {fileID: 4679186980101144}
+  tag: 
 --- !u!114 &114536319552085540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnitude: 1000
+  tag: Radio Wave
 --- !u!212 &212644859932444740
 SpriteRenderer:
   m_ObjectHideFlags: 1
