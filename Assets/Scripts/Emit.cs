@@ -7,6 +7,10 @@ public class Emit : MonoBehaviour {
     public Transform spawn;
 
 	void Start () {
-        Instantiate(emitted, spawn.position, spawn.rotation);
+        //Instantiate(emitted, spawn.position, spawn.rotation);
 	}
+
+    public void Transmit() {
+        Instantiate(emitted, spawn.position, spawn.rotation);
+    }
 }
