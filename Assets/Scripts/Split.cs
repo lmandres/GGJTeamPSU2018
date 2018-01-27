@@ -11,8 +11,12 @@ public class Split : MonoBehaviour, IBeginDragHandler,  IDragHandler, IEndDragHa
     public static GameObject satellite;
     Vector3 startPos;
     Quaternion initQ;
+    public string tag;
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag != tag) {
+            return;
+        }
         Destroy(collision.gameObject);
         foreach (Transform spawn in spawns) {
             Instantiate(emitted, spawn.position, spawn.rotation);
