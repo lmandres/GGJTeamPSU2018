@@ -9,4 +9,9 @@ public class Emit : MonoBehaviour {
 	void Start () {
         Instantiate(emitted, spawn.position, spawn.rotation);
 	}
+
+    private void OnMouseDown()
+    {
+        Debug.Log("RAWR");
+    }
 }
