@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4772451667456238}
   - component: {fileID: 212642858452963718}
   - component: {fileID: 95525099235134406}
+  - component: {fileID: 50074448131605750}
+  - component: {fileID: 114730178901805100}
   m_Layer: 0
   m_Name: Radio Wave
   m_TagString: Untagged
@@ -41,6 +43,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50074448131605750
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027364068940662}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!95 &95525099235134406
 Animator:
   serializedVersion: 3
@@ -58,6 +80,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114730178901805100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027364068940662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd8b8c3d882b4c43911f1207a122c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+  strength: 100
 --- !u!212 &212642858452963718
 SpriteRenderer:
   m_ObjectHideFlags: 1
