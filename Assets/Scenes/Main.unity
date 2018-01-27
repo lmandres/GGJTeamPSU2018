@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212684183115764562, guid: 5f07ffbf363d4bf4aa35a28e9197cbc4,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 146456141
+      objectReference: {fileID: 0}
+    - target: {fileID: 212684183115764562, guid: 5f07ffbf363d4bf4aa35a28e9197cbc4,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f07ffbf363d4bf4aa35a28e9197cbc4, type: 2}
   m_IsPrefabParent: 0
@@ -226,7 +236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846306301
 GameObject:
@@ -307,5 +317,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
