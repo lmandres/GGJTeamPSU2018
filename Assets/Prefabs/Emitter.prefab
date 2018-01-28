@@ -231,6 +231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emitted: {fileID: 1216918884660516, guid: 693a1d1c80372f54ca82fe454b523ee7, type: 2}
   spawn: {fileID: 4869669132322174}
+  radioSound: {fileID: 8300000, guid: 971818fcccc3aa141892e70de03e8927, type: 3}
+  volLowRange: 0.5
+  volHighRange: 1
 --- !u!212 &212233566413814024
 SpriteRenderer:
   m_ObjectHideFlags: 1
