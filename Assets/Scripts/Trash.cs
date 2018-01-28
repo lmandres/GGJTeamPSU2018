@@ -5,9 +5,11 @@ using UnityEngine.EventSystems;
 
 public class Trash : MonoBehaviour, IDropHandler {
 
+    public BoxCollider2D trashcan;
+
 	// Use this for initialization
 	void Start () {
-		
+		trashcan.bounds = new Bounds()
 	}
 	
 	// Update is called once per frame
@@ -23,6 +25,7 @@ public class Trash : MonoBehaviour, IDropHandler {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("Trash_impact");
         if (collision.gameObject.tag != tag) {
             return;
         }
