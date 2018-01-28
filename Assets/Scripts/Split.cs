@@ -17,36 +17,13 @@ public class Split : MonoBehaviour {
         if (collision.gameObject.tag != tag) {
             return;
         }
+        // Ignore if the object faces away from the recieving satellite
+        if (Quaternion.Angle(gameObject.transform.rotation, collision.transform.rotation) >= 90) {
+            return;
+        }
         Destroy(collision.gameObject);
         foreach (Transform spawn in spawns) {
             Instantiate(emitted, spawn.position, spawn.rotation);
         }
-    }
-
-    private void OnMouseDrag()
-    {
-        Debug.Log("draaaaag");
-
-        Vector3 newPos = Input.mousePosition;
-        Vector3 newMappedPos = new Vector3(
-            ((float)newPos.x - (Screen.width / 2)) / ((float)Screen.width) * 12,
-            ((float)newPos.y - (Screen.height / 2)) / ((float)Screen.height) * 10,
-            newPos.z);
-        if (!locked) {
-            transform.position = newMappedPos;
-        }
-    }
-
-    private void OnMouseDown() {
-        Debug.Log("mousedown");
-        /*if (locked) {
-            Debug.Log("mousedown on locked splitter!");
-        } else {
-            Debug.Log("mousedown on unlocked splitter!");
-            Vector2 MousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector2 objPosition = Camera.main.ScreenToWorldPoint(MousePosition);
-            transform.position = objPosition;
-        }*/
-    }
-        
+    } 
 }
