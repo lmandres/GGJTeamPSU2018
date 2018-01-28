@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Split : MonoBehaviour {
 
+    public Animator animator;
+    public float delay = 0;
     public GameObject emitted;
     public Transform[] spawns;
     public bool locked; //locked items are part of the puzzle
@@ -31,10 +33,20 @@ public class Split : MonoBehaviour {
             return;
         }*/
         Destroy(collision.gameObject);
-        foreach (Transform spawn in spawns) {
+        StartCoroutine(Fire());
+    } 
+
+    private IEnumerator Fire() {
+        if (animator)
+        {
+            animator.SetTrigger("Fire");
+            yield return new WaitForSeconds(delay);
+        }
+        foreach (Transform spawn in spawns)
+        {
             Instantiate(emitted, spawn.position, spawn.rotation);
             float vol = Random.Range(volLowRange, volHighRange);
             source.PlayOneShot(radioSound, vol);
         }
-    } 
+    }
 }
