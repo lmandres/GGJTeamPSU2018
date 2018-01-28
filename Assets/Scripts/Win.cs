@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Win : MonoBehaviour {
-	GameObject WinCanvas;
+	public GameObject WinCanvas;
 
-	void Start () {
-		WinCanvas = GameObject.Find("Win Canvas");
-		WinCanvas.SetActive(false);
+	void Awake () {
+		Debug.Log(WinCanvas);
+        WinCanvas.SetActive(false);
+        Debug.Log(WinCanvas.activeSelf);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
+		Debug.Log("IS IT EVEN TRIGGERING ME!?");
         WinCanvas.SetActive(true);
+        Debug.Log(WinCanvas.activeSelf);
 	}
 }
