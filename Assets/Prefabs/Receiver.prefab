@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212449896055504204}
   - component: {fileID: 70040974691283846}
   - component: {fileID: 114077945143961912}
+  - component: {fileID: 114313387563507690}
   m_Layer: 0
   m_Name: Receiver
   m_TagString: Untagged
@@ -140,6 +141,20 @@ MonoBehaviour:
   spawns: []
   locked: 0
   tag: 
+  radioSound: {fileID: 0}
+  volLowRange: 0.5
+  volHighRange: 1
+--- !u!114 &114313387563507690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1742136136718114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d70600346cb52489d69bf48bc320da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114403901964640858
 MonoBehaviour:
   m_ObjectHideFlags: 1
