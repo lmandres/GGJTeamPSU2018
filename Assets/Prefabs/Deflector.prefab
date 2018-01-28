@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4038641981580126}
   - component: {fileID: 212768594802636044}
+  - component: {fileID: 58109557997698734}
+  - component: {fileID: 114509129040518968}
   m_Layer: 0
   m_Name: Deflector
   m_TagString: Untagged
@@ -52,7 +54,8 @@ GameObject:
   - component: {fileID: 4564672774964896}
   - component: {fileID: 212121552793022064}
   - component: {fileID: 70392497353518682}
-  - component: {fileID: 114259794932242006}
+  - component: {fileID: 114123242120736574}
+  - component: {fileID: 50569114733147062}
   m_Layer: 0
   m_Name: deflector
   m_TagString: Untagged
@@ -94,13 +97,48 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1961862606752436}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4038641981580126}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!50 &50569114733147062
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981607321630332}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58109557997698734
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235997402179716}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.15
 --- !u!70 &70392497353518682
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -116,7 +154,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.02}
   m_Size: {x: 0.48, y: 0.03}
   m_Direction: 1
---- !u!114 &114259794932242006
+--- !u!114 &114123242120736574
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -124,11 +162,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1981607321630332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da999c6dba3b5e4293f275d8b911bf2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9211bb5d52d2d044093e570abc5ead8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnitude: 1000
+  emitted: {fileID: 1027364068940662, guid: 6f898125866c29842be28edfc436822d, type: 2}
+  spawns:
+  - {fileID: 4602626987650288}
+  locked: 0
   tag: Radio Wave
+--- !u!114 &114509129040518968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235997402179716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5228903f05d490645a02b43fe0c9b4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
 --- !u!212 &212121552793022064
 SpriteRenderer:
   m_ObjectHideFlags: 1
