@@ -52,8 +52,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4898634956762792}
   - component: {fileID: 50964590177255692}
-  - component: {fileID: 70123686020421720}
   - component: {fileID: 114077134213576346}
+  - component: {fileID: 61844752406106820}
   m_Layer: 0
   m_Name: Receiver
   m_TagString: Untagged
@@ -70,9 +70,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4908410411689170}
   - component: {fileID: 212684183115764562}
-  - component: {fileID: 50091908256452730}
-  - component: {fileID: 70070052156142202}
-  - component: {fileID: 114536319552085540}
   m_Layer: 0
   m_Name: splitter_0
   m_TagString: Untagged
@@ -115,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1217375690861956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.014065638, y: -0.032059073, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4908410411689170}
@@ -144,7 +141,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1341544258121920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -164,26 +161,6 @@ Transform:
   m_Father: {fileID: 4405592636228092}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50091908256452730
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1623449878091594}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!50 &50964590177255692
 Rigidbody2D:
   serializedVersion: 4
@@ -219,23 +196,8 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
---- !u!70 &70070052156142202
-CapsuleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1623449878091594}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.11, y: 0}
-  m_Size: {x: 0.1, y: 0.49}
-  m_Direction: 0
---- !u!70 &70123686020421720
-CapsuleCollider2D:
+--- !u!61 &61844752406106820
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -246,9 +208,19 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.24, y: 0}
-  m_Size: {x: 0.1, y: 0.4}
-  m_Direction: 0
+  m_Offset: {x: -0.19, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.4}
+  m_EdgeRadius: 0
 --- !u!114 &114077134213576346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -264,19 +236,7 @@ MonoBehaviour:
   spawns:
   - {fileID: 4318773056458836}
   - {fileID: 4679186980101144}
-  tag: Radio Wave
---- !u!114 &114536319552085540
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1623449878091594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da999c6dba3b5e4293f275d8b911bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magnitude: 1000
+  locked: 0
   tag: Radio Wave
 --- !u!212 &212644859932444740
 SpriteRenderer:
