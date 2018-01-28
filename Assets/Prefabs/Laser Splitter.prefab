@@ -66,6 +66,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4203069233690768}
   - component: {fileID: 58995123904000058}
+  - component: {fileID: 114493959760809242}
   m_Layer: 0
   m_Name: Laser Splitter
   m_TagString: Untagged
@@ -206,6 +207,18 @@ MonoBehaviour:
   - {fileID: 4232781676079670}
   locked: 0
   tag: Laser
+--- !u!114 &114493959760809242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440329374235600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5228903f05d490645a02b43fe0c9b4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
 --- !u!212 &212866039773119944
 SpriteRenderer:
   m_ObjectHideFlags: 1

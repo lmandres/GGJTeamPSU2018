@@ -14,7 +14,6 @@ public class Split : MonoBehaviour {
     public string tag;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Receiver is Hit");
         if (collision.gameObject.tag != tag) {
             return;
         }

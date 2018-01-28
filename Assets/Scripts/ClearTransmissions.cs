@@ -27,5 +27,10 @@ public class ClearTransmissions : MonoBehaviour {
         foreach (GameObject sat in sats) {
             Destroy(sat);
         }
+        DragHandler[] items = GameObject.FindObjectsOfType<DragHandler>();
+//        Debug.Log(items.Length);
+        foreach (DragHandler item in items) {
+            item.reserCounter();
+        }
     }
 }
