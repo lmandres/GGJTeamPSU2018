@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadioWave : MonoBehaviour {
+public class Laser : MonoBehaviour {
     public float speed;
-    public int strength;
+    public int timeout;
 
 	void Start () {
         GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(1.0f * speed, 0));
+        StartCoroutine(Cull());
     }
 
-    private void FixedUpdate() {
-        strength--;
-        if (strength < 1) {
-            Destroy(gameObject);
-        }
+    IEnumerator Cull() {
+        yield return new WaitForSeconds(timeout);
+        Destroy(gameObject);
     }
 }
