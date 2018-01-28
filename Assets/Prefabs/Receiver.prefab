@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4611957407776938}
   - component: {fileID: 212449896055504204}
   - component: {fileID: 70040974691283846}
-  - component: {fileID: 114013348128542760}
+  - component: {fileID: 114077945143961912}
   m_Layer: 0
   m_Name: Receiver
   m_TagString: Untagged
@@ -125,7 +125,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.15, y: 0.03}
   m_Size: {x: 0.02, y: 0.47}
   m_Direction: 0
---- !u!114 &114013348128542760
+--- !u!114 &114077945143961912
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -133,11 +133,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1742136136718114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da999c6dba3b5e4293f275d8b911bf2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eec296e6bb269d43b3f7330c9ce4190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnitude: 10000
-  tag: Radio Wave
+  emitted: {fileID: 1216918884660516, guid: 693a1d1c80372f54ca82fe454b523ee7, type: 2}
+  spawns: []
+  locked: 0
+  tag: 
 --- !u!114 &114403901964640858
 MonoBehaviour:
   m_ObjectHideFlags: 1
