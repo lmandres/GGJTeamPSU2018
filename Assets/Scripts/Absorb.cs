@@ -10,6 +10,6 @@ public class Absorb : MonoBehaviour {
         if (collision.gameObject.tag != tag) {
             return;
         }
-        collision.gameObject.GetComponent<RadioWave>().strength -= magnitude;
+        collision.gameObject.GetComponent<DrawRadioWaves>().m_Intensity += magnitude;
     }
 }
