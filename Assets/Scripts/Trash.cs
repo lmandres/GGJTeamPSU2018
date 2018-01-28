@@ -9,7 +9,7 @@ public class Trash : MonoBehaviour, IDropHandler {
 
 	// Use this for initialization
 	void Start () {
-		trashcan.bounds = new Bounds()
+		//trashcan.bounds = new Bounds();
 	}
 	
 	// Update is called once per frame
