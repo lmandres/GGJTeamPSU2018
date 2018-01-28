@@ -14,5 +14,6 @@ public class Win : MonoBehaviour {
 		//and quit button
 		if(GUI.Button(new Rect((Screen.width/3) * 2,Screen.height/2 +150,100,40),"Quit")){
 			Application.Quit();
-    }
+    	}
+	}
 }
