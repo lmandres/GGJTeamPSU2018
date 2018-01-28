@@ -18,9 +18,9 @@ public class Deflect : MonoBehaviour {
             return;
         }
         // Ignore if the object faces away from the recieving satellite
-        if (Quaternion.Angle(gameObject.transform.rotation, collision.transform.rotation) >= 90) {
-            return;
-        }
+        //if (Quaternion.Angle(gameObject.transform.rotation, collision.transform.rotation) >= 90) {
+        //    return;
+        //}
         Destroy(collision.gameObject);
         foreach (Transform spawn in spawns) {
             Instantiate(emitted, spawn.position, spawn.rotation);
