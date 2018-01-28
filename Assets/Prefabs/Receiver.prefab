@@ -158,10 +158,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eec296e6bb269d43b3f7330c9ce4190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  delay: 0
   emitted: {fileID: 1216918884660516, guid: 693a1d1c80372f54ca82fe454b523ee7, type: 2}
   spawns: []
   locked: 0
-  tag: 
+  tag: Radio Wave
   radioSound: {fileID: 0}
   volLowRange: 0.5
   volHighRange: 1
@@ -176,7 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d70600346cb52489d69bf48bc320da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 0
 --- !u!114 &114403901964640858
 MonoBehaviour:
   m_ObjectHideFlags: 1
