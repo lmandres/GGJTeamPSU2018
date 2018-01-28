@@ -8,6 +8,7 @@ TagManager:
   - Emitter
   - Dragable
   - PlayerSat
+  - Laser
   layers:
   - Default
   - TransparentFX

@@ -193,6 +193,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82070591382058950, guid: 24be2785308c74c4e8ce4781948d8722,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24be2785308c74c4e8ce4781948d8722, type: 2}
   m_IsPrefabParent: 0
@@ -447,7 +452,7 @@ Prefab:
         type: 2}
       propertyPath: trashcan
       value: 
-      objectReference: {fileID: 1816957323}
+      objectReference: {fileID: 0}
     - target: {fileID: 224869011423271032, guid: bee1708635d5ede488781d49a191bcfe,
         type: 2}
       propertyPath: m_AnchorMin.y
@@ -988,6 +993,27 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 224291043949027996, guid: bee1708635d5ede488781d49a191bcfe,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156106079951816, guid: bee1708635d5ede488781d49a191bcfe, type: 2}
+      propertyPath: m_Name
+      value: Laser Splitter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307978770094126, guid: bee1708635d5ede488781d49a191bcfe, type: 2}
+      propertyPath: m_Name
+      value: To Laser Converter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360017916477356, guid: bee1708635d5ede488781d49a191bcfe, type: 2}
+      propertyPath: m_Name
+      value: Laser Deflector
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757100879951960, guid: bee1708635d5ede488781d49a191bcfe, type: 2}
+      propertyPath: m_Name
+      value: Mutator To Radio
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bee1708635d5ede488781d49a191bcfe, type: 2}
   m_IsPrefabParent: 0
@@ -998,11 +1024,11 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1816957322}
-  - component: {fileID: 1816957321}
   - component: {fileID: 1816957323}
+  - component: {fileID: 1816957321}
+  - component: {fileID: 1816957322}
   m_Layer: 0
-  m_Name: Trashcan
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1049,8 +1075,14 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!4 &1816957322
-Transform:
+--- !u!222 &1816957322
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816957320}
+--- !u!224 &1816957323
+RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1062,31 +1094,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1816957323
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1816957320}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -9, y: -3}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 8, y: 4.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 19.2, y: 10.8}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1846306301
 GameObject:
   m_ObjectHideFlags: 0
