@@ -1,26 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Dragable : MonoBehaviour {
     public bool locked;
     private HingeJoint2D lastHinge;
+    
 
     private void Start() {
         lastHinge = gameObject.GetComponentInChildren<HingeJoint2D>();
     }
-    private void OnMouseUp()
-    {
-        if (lastHinge) {
-            Debug.Log("Shutting off motor");
 
+    public void OnMouseUp() {
+        if (lastHinge) {
             JointMotor2D motor = lastHinge.motor;
             motor.motorSpeed = 0;
             lastHinge.motor = motor;
-
         }
+
+        RectTransform[] rects = GameObject.FindObjectsOfType<RectTransform>();
+        foreach (RectTransform r in rects) {
+            if (r.name == "Trash") {
+                Vector3 diff = Input.mousePosition - r.position;
+                if ( Mathf.Abs(diff.x) < r.sizeDelta.x/2 && Mathf.Abs(diff.y) < r.sizeDelta.y/2) {
+                    deleteSelf();
+                }
+
+            }
+        }
+        
     }
-    private void OnMouseDrag() {
+    private void deleteSelf() {
+        DragHandler[] items = GameObject.FindObjectsOfType<DragHandler>();
+        string myName = gameObject.name.Replace("(Clone)", "");
+        foreach (DragHandler item in items) {
+            if (item.name == myName) {
+                item.incrementCounter();
+            }
+        }
+        Destroy(gameObject);
+    }
+
+    public void OnMouseDrag() {
         Vector3 thing = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 newPos = new Vector3(thing.x, thing.y, 0);
 

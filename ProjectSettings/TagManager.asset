@@ -8,6 +8,8 @@ TagManager:
   - Emitter
   - Dragable
   - PlayerSat
+  - Laser
+  - Win
   layers:
   - Default
   - TransparentFX
@@ -56,4 +58,7 @@ TagManager:
     locked: 0
   - name: Transmissions
     uniqueID: 391493315
+    locked: 0
+  - name: Win
+    uniqueID: 3235268225
     locked: 0
