@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Radio Wave
+  - Emitter
+  - Dragable
+  - PlayerSat
   layers:
   - Default
   - TransparentFX

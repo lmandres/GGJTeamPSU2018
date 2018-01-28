@@ -15,7 +15,7 @@ public class Dragable : MonoBehaviour {
             if (ctrlPressed) {
                 //rotate
                 transform.rotation = Quaternion.LookRotation(Vector3.forward, newPos - transform.position);
-                transform.Rotate(new Vector3(0, 0, 90));
+                transform.Rotate(new Vector3(0, 0, 90)); //Fix 'fronts' of sprintes
             } else {
                 //Drag
                 transform.position = new Vector3(thing.x, thing.y, 0);
