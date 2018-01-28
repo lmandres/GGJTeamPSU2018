@@ -19,32 +19,23 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler,  IDragHandler, IEnd
     }
 
     public void OnEndDrag(PointerEventData eventData) {
-        Vector3 newPos = Input.mousePosition;
-        Vector3 newMappedPos = new Vector3(
-            ((float) newPos.x - (Screen.width/2))/((float)Screen.width) * 12,
-            ((float) newPos.y - (Screen.height/2))/((float)Screen.height) * 10,
-            newPos.z);
 
-        Debug.Log(newPos.ToString() + " -> " + newMappedPos.ToString());
+        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 newPos = new Vector3(pos.x, pos.y, 0);
 
         if (satellite.transform.childCount > 0) {
             Transform sat = satellite.transform.GetChild(0);
-            Debug.Log(sat);
-            //sat.
-            Instantiate(sat, newMappedPos, Quaternion.identity);
+            //Debug.Log(sat);
+            Instantiate(sat, newPos, Quaternion.identity);
         }
         satellite = null;
         transform.position = startPos;
     }
 
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start () { }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update () { }
 
 }

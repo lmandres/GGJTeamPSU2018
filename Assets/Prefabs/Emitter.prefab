@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 70318094575668898}
   m_Layer: 0
   m_Name: Emitter
-  m_TagString: Untagged
+  m_TagString: Emitter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027520815926100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8843284, y: 0.0518118, z: 0}
+  m_LocalPosition: {x: -2.9657145, y: 0.030191422, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4745426089784058}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f6e2c1e2ea5424f950734ce840d05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emitted: {fileID: 1216918884660516, guid: 693a1d1c80372f54ca82fe454b523ee7, type: 2}
+  emitted: {fileID: 1027364068940662, guid: 6f898125866c29842be28edfc436822d, type: 2}
   spawn: {fileID: 4869669132322174}
 --- !u!212 &212233566413814024
 SpriteRenderer:
