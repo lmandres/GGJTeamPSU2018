@@ -52,9 +52,8 @@ public class Dragable : MonoBehaviour {
 
         if (!locked) {
             if (altPressed) { //adjust angle, if there is one
-                Debug.Log("Setting lastHinge");
                 if (lastHinge) {
-                    int diff = (int)(newPos.y - transform.position.y);
+                    int diff = (int)(transform.position.y - newPos.y);
 
                     JointMotor2D motor = lastHinge.motor;
                     motor.maxMotorTorque = 1000;
