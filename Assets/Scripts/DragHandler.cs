@@ -10,7 +10,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler,  IDragHandler, IEnd
     public int limit;
     private Vector3 startPos;
     private Transform stopPos;
-    private int used;
+    public int used;
 
     public void Start() {
         reserCounter();
@@ -20,6 +20,12 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler,  IDragHandler, IEnd
         gameObject.GetComponentInChildren<Text>().text = limit.ToString();
         used = 0;
     }
+
+    public void incrementCounter() {
+        used--;
+        gameObject.GetComponentInChildren<Text>().text = (limit - used).ToString();
+    }
+
 
     public void OnBeginDrag(PointerEventData eventData) {
         if (used < limit) {

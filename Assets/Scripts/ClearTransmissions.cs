@@ -5,6 +5,7 @@ public class ClearTransmissions : MonoBehaviour {
     public Button clearButton;
     public Button wipeButton;
     private GameObject[] xmits;
+    private GameObject[] lasers;
     private GameObject[] sats;
 
     void Start() {
@@ -16,9 +17,13 @@ public class ClearTransmissions : MonoBehaviour {
 
     private void ClearOnClick() {
         xmits = GameObject.FindGameObjectsWithTag("Radio Wave");
+        lasers = GameObject.FindGameObjectsWithTag("Laser");
 
         foreach (GameObject xmit in xmits) {
             Destroy(xmit);
+        }
+        foreach (GameObject laser in lasers) {
+            Destroy(laser);
         }
     }
     private void WipeOnClick() {
@@ -28,7 +33,6 @@ public class ClearTransmissions : MonoBehaviour {
             Destroy(sat);
         }
         DragHandler[] items = GameObject.FindObjectsOfType<DragHandler>();
-//        Debug.Log(items.Length);
         foreach (DragHandler item in items) {
             item.reserCounter();
         }
