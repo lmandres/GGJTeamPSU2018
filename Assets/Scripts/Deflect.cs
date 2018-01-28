@@ -12,6 +12,15 @@ public class Deflect : MonoBehaviour {
     Vector3 startPos;
     Quaternion initQ;
     public string tag;
+    public AudioClip radioSound;
+
+    private AudioSource source;
+    public float volLowRange = .5f;
+    public float volHighRange = 1.0f;
+
+    public void Awake(){
+        source = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag != tag) {
@@ -24,6 +33,8 @@ public class Deflect : MonoBehaviour {
         Destroy(collision.gameObject);
         foreach (Transform spawn in spawns) {
             Instantiate(emitted, spawn.position, spawn.rotation);
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(radioSound, vol);
         }
     } 
 }
