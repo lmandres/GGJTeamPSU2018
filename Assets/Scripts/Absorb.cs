@@ -10,7 +10,7 @@ public class Absorb : MonoBehaviour {
         if (absorb_laser && collision.gameObject.tag == "Laser") {
             Destroy(collision.gameObject);
         } else if (collision.gameObject.tag == "Radio Wave") {
-            collision.gameObject.GetComponent<DrawRadioWaves>().m_Intensity += magnitude;
+            collision.gameObject.GetComponent<DrawRadioWaves>().m_Intensity -= magnitude;
         }
     }
 }
