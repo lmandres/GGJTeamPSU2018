@@ -14,6 +14,5 @@ public class Win : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D collision) {
 		Debug.Log("IS IT EVEN TRIGGERING ME!?");
         WinCanvas.SetActive(true);
-        Debug.Log(WinCanvas.activeSelf);
 	}
 }
