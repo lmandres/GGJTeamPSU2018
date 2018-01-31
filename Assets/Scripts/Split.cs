@@ -19,13 +19,20 @@ public class Split : MonoBehaviour {
     private AudioSource source;
     public float volLowRange = .5f;
     public float volHighRange = 1.0f;
+    public int maxTagCount = 50;
 
     public void Awake(){
         source = GetComponent<AudioSource>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.tag + ": " + GameObject.FindGameObjectsWithTag(collision.gameObject.tag).Length.ToString());
         if (collision.gameObject.tag != tag) {
+            return;
+        } else if (GameObject.FindGameObjectsWithTag(collision.gameObject.tag).Length > maxTagCount)
+        {
+            Destroy(collision.gameObject);
             return;
         }
         // Ignore if the object faces away from the recieving satellite
