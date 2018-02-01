@@ -1,22 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Win : MonoBehaviour {
-	public GameObject WinCanvas;
-
-	void Awake ()
-    {
-        Debug.Log("This should run . . .");
-        Debug.Log(WinCanvas);
-        WinCanvas.SetActive(false);
-        Debug.Log(WinCanvas.activeSelf);
-	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("IS IT EVEN TRIGGERING ME!?");
-        Debug.Log(collision);
-        WinCanvas.SetActive(true);
-	}
+        GameObject nextLevelBtn = GameObject.Find("NextLevel");
+        Component child = nextLevelBtn.GetComponentInChildren(typeof(Button));
+        Button childButton = (Button)child;
+
+        childButton.enabled = true;
+    }
 }
